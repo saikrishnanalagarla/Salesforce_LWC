@@ -1,0 +1,17 @@
+<template>
+        <lightning-card title="Observing changes through @decorator">
+            <div style="padding-left: 10%;  padding-top: 10%; text-align: center;">
+                <h1>@Track decorator</h1>
+            <p> Fullname : {fullname.fname}</p>
+            <lightning-button label="Change text " variant="brand" onclick={handleClick}>  
+            </lightning-button>
+            <p> Apple   ==> Fruit or Vegetable {Fruits.apple}</p>
+            <p> Banana  ==> Fruit or Vegetable {Fruits.banana}</p>
+            <lightning-button label="Click button for Change " variant="brand" onclick={handleChange}></lightning-button>
+        </div>
+        <p> When we are refreshing(Changing) data completly in Object or Array  no need of putting @track decorator</p>
+        <p>If we are Changing only some elements in an array or Object ,
+        it will not trigger the change event. so we need to put @track mandatory</p>
+        </lightning-card>
+
+</template>
