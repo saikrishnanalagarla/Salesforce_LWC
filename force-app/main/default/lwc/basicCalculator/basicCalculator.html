@@ -1,0 +1,22 @@
+<template>
+    
+    <lightning-card title="Calculator" icon-name="standard:account" >
+        <div class="slds-var-p-around_medium">
+        <lightning-input label="Enter Number" placeholder="enter value" value={numberone} onchange={handleChangeone}></lightning-input>
+        <lightning-input label="Enter Number" placeholder="enter value" value={numbertwo} onchange={handleChangetwo}></lightning-input>
+    </div>
+    <div class="slds-var-p-around_medium">
+        <lightning-button-group>
+        <lightning-button label="add" variant="brand" onclick={addClick}></lightning-button>
+        <lightning-button label="sub" variant="brand" onclick={subClick}></lightning-button>
+        <lightning-button label="mul" variant="brand" onclick={mulClick}></lightning-button>
+        <lightning-button label="div" variant="brand" onclick={divClick}></lightning-button>
+        <lightning-button label="clear" variant="brand" onclick={handleClear}></lightning-button>
+    </lightning-button-group>
+    
+    </div>
+    <div>
+        Output: {result}
+    </div>
+    </lightning-card>
+</template>
