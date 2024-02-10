@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="For each loop in LWC">
+        <div style="display: block; background-color: aqua; border-radius: 10%; 
+        padding-left: 50%; font-size: large;">
+        <template for:each={fruits} for:item="fruit">  
+            <p key={fruit}>{fruit}</p>
+        </template>
+    </div>
+    </lightning-card>
+    <lightning-card title="iterating Object throug for loop" icon-name="custom : custom14">
+        <template for:each={userDetails} for:item="user">
+            <p key={user.id}> {user.firstname} {user.lastname}</p>
+        </template>
+    </lightning-card>
+    <lightning-card title="iterating Object through Iterator">
+        <template iterator:it={userDetails} >
+            <div key={it.value.id}>
+                <p>Name:{it.value.firstname} {it.value.lastname}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
