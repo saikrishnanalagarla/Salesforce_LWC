@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Conditional rendering Example">
+        <p> Please Click on Check box to see the message</p>
+        <lightning-input type="checkbox" label="Display Message"
+        name="input"
+        onchange={handleChange}></lightning-input>
+        <template lwc:if={displayMessage} >
+            <p>You have checked the checkbox. The message will be displayed.</p> 
+        </template>
+        <template lwc:else>
+            <p>The message is not displayed because you haven't clicked the checkbox yet.</p>
+        </template>
+    </lightning-card>
+
+</template>
