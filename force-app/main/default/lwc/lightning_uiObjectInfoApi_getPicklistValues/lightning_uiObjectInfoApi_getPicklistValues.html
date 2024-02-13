@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="getPicklistValue lightning/ui"> 
+    <div class="slds-var-p-around_medium">
+        <template lwc:if={wiredPicklistValue.data}>
+            <lightning-combobox 
+            name="Progress"
+            label="Industry" 
+            value={selectedValue}
+            placeholder="Select industry"
+            options={wiredPicklistValue.data.values}
+            onchange={handleChange}></lightning-combobox>
+        </template>
+    </div>
+    <p>Selected value is : {selectedValue}</p>
+</lightning-card>
+</template>
