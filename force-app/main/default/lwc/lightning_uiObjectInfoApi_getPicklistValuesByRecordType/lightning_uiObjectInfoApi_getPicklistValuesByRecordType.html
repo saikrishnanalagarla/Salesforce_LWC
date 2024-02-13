@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="getPicklistValuesByRecordTypeId">
+        <template lwc:if={recordPicklistTypes.data}>
+            <lightning-combobox 
+            name="Progress"
+            label="Industry" 
+            placeholder="Select industry"
+            options={recordPicklistTypes.data.picklistFieldValues.Rating.values}
+            ></lightning-combobox>
+
+            <p><b>Priority picklist</b></p>
+            <lightning-combobox 
+            name="Priority"
+            label="Priority" 
+            placeholder="Select Priority"
+            options={recordPicklistTypes.data.picklistFieldValues.CustomerPriority__c.values}
+            ></lightning-combobox>
+            <p><b>Clean Status</b></p>
+            <lightning-combobox 
+            name="status"
+            label="Clean Status" 
+            placeholder="Select status"
+            options={recordPicklistTypes.data.picklistFieldValues.CleanStatus.values}
+            ></lightning-combobox>
+        </template>
+    </lightning-card>
+</template>
