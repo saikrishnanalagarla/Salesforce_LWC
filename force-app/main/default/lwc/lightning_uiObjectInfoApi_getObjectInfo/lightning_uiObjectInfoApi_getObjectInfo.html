@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="uiObjectInfoApi getObjectInfo"> 
+        <template lwc:if={accountInfo}>
+            <p>Account Api Name   : {accountInfo.apiName}</p>
+            <p>Account Lable Name : {accountInfo.labelPlural}</p>
+            <div>
+                <!-- iterating child object  info -->
+                <div class="slds-var-p-around_medium">
+                <p><b> Child Object Api Names </b></p>
+                <template for:each={accountInfo.childRelationships} for:item="info">
+                    <p key={info.childObjectApiName}> {info.childObjectApiName}</p>
+                </template>
+            </div>
+            </div>
+        </template>
+        <template lwc:elseif={errors}>errors</template>
+    </lightning-card>
+    
+</template>
