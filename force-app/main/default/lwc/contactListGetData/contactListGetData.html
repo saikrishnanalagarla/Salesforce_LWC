@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="get data">
+        <lightning-layout class="slds-p-around--medium">
+            <lightning-layout-item>
+            <template lwc:if= {contacts.data}><!--Checking weather data is avilable or not-->
+            <template for:each={contacts.data} for:item="cons"><!--Iterating  over the contacts-->
+                <c-contact-list--show-data contact={cons} key={cons.Id}
+                oncontactselection={clickselectionHandler}
+                ></c-contact-list--show-data><!--passing the data to child Component-->
+            </template>
+        </template>
+    </lightning-layout-item><!--displaying user selected Contact-->
+    <lightning-layout-item padding="around-small">
+        <template lwc:if={selectedContact}>
+        <img src={selectedContact.PhotoUrl} alt="image not found">
+        <p>Name : {selectedContact.Name}</p>
+        <lightning-formatted-phone value={selectedContact.Phone}></lightning-formatted-phone><br>
+        <lightning-formatted-email value={selectedContact.Email}></lightning-formatted-email>
+    </template>
+    </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+
+</template>
