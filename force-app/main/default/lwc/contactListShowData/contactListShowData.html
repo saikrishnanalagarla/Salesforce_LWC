@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <a href="#" onclick={clickHandler}>
+        <lightning-layout vertical-align="center"> <!--displaying url and photo -->
+            <lightning-layout-item padding="around-small">
+                <img src={contact.PhotoUrl}>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <p>Name: {contact.Name}</p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </a>
+    </lightning-card>
+
+</template>
