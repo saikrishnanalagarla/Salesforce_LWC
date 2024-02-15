@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Record View form">
+        <lightning-record-edit-form
+        object-api-name={objectApiName} 
+        record-id={recordId} 
+        onsuccess={handleSuccess}
+        onerror={handleError}
+        onsubmit={handleSubmit}>
+        <lightning-messages></lightning-messages>
+            <div class="slds-var-p-around_small">
+                <lightning-input-field field-name={fields.Name}></lightning-input-field>
+                <lightning-input-field field-name={fields.Email}></lightning-input-field>
+                <lightning-input-field field-name={fields.Rating}></lightning-input-field>
+                <div class="slds-var-p-around_small">
+                <lightning-button type="submit" label="Create Account" variant="brand"></lightning-button>
+                
+                <lightning-button type="reset" label="reset Account" variant="brand" onclick={handleReset}></lightning-button>
+            </div>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
